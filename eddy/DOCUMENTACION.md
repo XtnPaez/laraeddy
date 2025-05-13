@@ -32,17 +32,23 @@ Repositorio GitHub: [https://github.com/XtnPaez/laraeddy](https://github.com/Xtn
 - Las migraciones personalizadas se crearán con el prefijo `create_`
 - Se utilizarán controladores tipo recurso (`--resource`) para los modelos CRUD
 
-## ✔️ Tabla de usuarios
-Usamos la tabla `cuis.usuarios` con los campos:
+## ✔️ Sistema de login
+Formulario en /login con autenticación por email y password.
+Contraseñas en formato bcrypt (password_hash).
+Al loguearse con éxito, se redirige a /inicio, pantalla de bienvenida.
+Logout disponible en /logout.
 
-```
-CREATE TABLE IF NOT EXISTS cuis.usuarios (
-    id integer PRIMARY KEY,
-    nombre text NOT NULL,
-    email text UNIQUE NOT NULL,
-    password_hash text NOT NULL,
-    rol text NOT NULL CHECK (rol IN ('admin', 'editor', 'visualizador')),
-    fecha_creacion timestamp DEFAULT now(),
-    estado boolean DEFAULT true
-);
-```
+## ✔️ Control de sesión
+Sesión basada en Laravel session.
+Middleware personalizado auth.session para proteger rutas.
+Redirección al login si el usuario no está autenticado.
+
+## ✔️ Roles definidos
+Por ahora existen los siguientes roles:
+admin (Superadmin) – sin restricciones
+editor – permisos acotados (a implementar)
+visualizador – acceso sólo de lectura (a implementar)
+
+## 📌 Próximo paso
+Diseño de funcionalidades completas para el rol admin (Superadmin), quien tendrá acceso total a los ABMs, configuración, control de usuarios, etc.
+
