@@ -17,7 +17,11 @@ Ubicación en disco: `C:\xampp\htdocs\cuis\laraeddy\eddy`
 
 Repositorio GitHub: [https://github.com/XtnPaez/laraeddy](https://github.com/XtnPaez/laraeddy)
 
----
+## 📂 Convenciones
+
+- El esquema de base de datos usado es `sig`
+- Las migraciones personalizadas se crearán con el prefijo `create_`
+- Se utilizarán controladores tipo recurso (`--resource`) para los modelos CRUD
 
 ## ✔️ Inicio del proyecto
 - Laravel instalado en `C:\xampp\htdocs\cuis\laraeddy\eddy`
@@ -25,12 +29,6 @@ Repositorio GitHub: [https://github.com/XtnPaez/laraeddy](https://github.com/Xtn
 - Repositorio vinculado: https://github.com/XtnPaez/laraeddy
 - Migraciones iniciales ejecutadas
 - Servidor en funcionamiento con `php artisan serve`
-
-## 📂 Convenciones
-
-- El esquema de base de datos usado es `sig`
-- Las migraciones personalizadas se crearán con el prefijo `create_`
-- Se utilizarán controladores tipo recurso (`--resource`) para los modelos CRUD
 
 ## ✔️ Sistema de login
 Formulario en /login con autenticación por email y password.
