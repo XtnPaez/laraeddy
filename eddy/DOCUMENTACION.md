@@ -1,19 +1,6 @@
 
 # Documentación del Proyecto "Gestión de CUI – LaraEddy"
 
-## Índice
-
-1. [Resumen del Proyecto](#resumen-del-proyecto)
-2. [Requisitos Técnicos](#requisitos-técnicos)
-3. [Instalación del Proyecto](#instalación-del-proyecto)
-4. [Base de Datos](#base-de-datos)
-5. [Autenticación y Roles](#autenticación-y-roles)
-6. [Estructura de Navegación y Vistas](#estructura-de-navegación-y-vistas)
-7. [Dashboard de Inicio](#dashboard-de-inicio)
-8. [Próximos pasos](#próximos-pasos)
-
----
-
 ## 1. Resumen del Proyecto
 
 Aplicación Laravel para la gestión integral de edificios educativos, con funcionalidades accesibles según el rol del usuario. Las principales funcionalidades son: Gestión de CUI (Búsqueda, Modificación, Alta, Baja), Gestión de usuarios, Listados de uso y Descargas.
@@ -49,7 +36,7 @@ Luego ejecutar migraciones si corresponde o conectar a la base ya existente.
 - Tras iniciar sesión exitosamente, el usuario accede a /inicio.
 - Se implementará control de acceso por rol, comenzando con "admin" (superadmin).
 
-## 6. Estructura de Navegación y Vistas
+## 5. Estructura de Navegación y Vistas
 Layout Base : Se implementó un layout Blade en resources/views/layouts/app.blade.php que incluye:
 
 Menú de navegación superior (navbar) con:
@@ -61,7 +48,7 @@ Footer persistente con el texto: © 2025 - UEICEE - MAPA - Gestión de CUI
 
 Todas las vistas futuras extienden este layout para mantener coherencia visual.
 
-## 7. Dashboard de Inicio
+## 6. Dashboard de Inicio
 Ruta: /inicio
 
 Vista: resources/views/inicio.blade.php
@@ -75,7 +62,7 @@ Contiene tarjetas accesibles visualmente, con Bootstrap, que resumen los módulo
 - Descargas	: Accedé a reportes o archivos relevantes del sistema. Ideal para trabajo offline o informes.
 - ABM de Usuarios : Accedé al ABM de Usuarios.
 
-## 8. Próximos pasos
+## 7. Próximos pasos
 - Implementar vistas funcionales para cada módulo.
 
 - Aplicar restricciones de acceso por rol en middleware.
