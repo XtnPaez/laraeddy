@@ -11,7 +11,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Buscar CUI</h5>
                         <p class="card-text">Ingresá un Código Único de Infraestructura (CUI) y accedé a toda la información disponible del edificio educativo.</p>
-                        <a href="#" class="btn btn-primary">Acceder</a>
+                        <a href="{{ route('buscar.cui') }}" class="btn btn-primary">Buscar CUI</a>
                     </div>
                 </div>
             </div>

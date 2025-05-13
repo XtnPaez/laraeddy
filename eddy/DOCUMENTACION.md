@@ -5,8 +5,6 @@
 
 Aplicación Laravel para la gestión integral de edificios educativos, con funcionalidades accesibles según el rol del usuario. Las principales funcionalidades son: Gestión de CUI (Búsqueda, Modificación, Alta, Baja), Gestión de usuarios, Listados de uso y Descargas.
 
----
-
 ## 2. Requisitos Técnicos
 
 - Laravel 11.x
@@ -14,8 +12,6 @@ Aplicación Laravel para la gestión integral de edificios educativos, con funci
 - PostgreSQL (con extensión PostGIS)
 - Composer
 - XAMPP o Laravel Server (`php artisan serve`)
-
----
 
 ## 3. Instalación del Proyecto
 

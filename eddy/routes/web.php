@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CuiController;
 
 Route::get('/', function () {
     return redirect('/login');
@@ -16,3 +17,6 @@ Route::middleware(['auth.session'])->group(function () {
         return view('inicio');
     })->name('inicio');
 });
+
+Route::get('/buscar', [CuiController::class, 'showBuscar'])->name('buscar.form');
+Route::post('/buscar', [CuiController::class, 'buscar'])->name('buscar.cui');
