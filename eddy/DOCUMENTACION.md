@@ -19,25 +19,30 @@ Repositorio GitHub: [https://github.com/XtnPaez/laraeddy](https://github.com/Xtn
 
 ---
 
-## ⚙️ Estado actual
-
-- Laravel instalado correctamente
-- Conexión con base de datos local PostgreSQL `sig` verificada
+## ✔️ Inicio del proyecto
+- Laravel instalado en `C:\xampp\htdocs\cuis\laraeddy\eddy`
+- Proyecto conectado a PostgreSQL (`sig`)
+- Repositorio vinculado: https://github.com/XtnPaez/laraeddy
 - Migraciones iniciales ejecutadas
 - Servidor en funcionamiento con `php artisan serve`
-
----
-
-## 📌 Próximos pasos
-
-- Conectar Laravel con tablas reales de PostgreSQL (`sig`)
-- Agregar autenticación con Breeze
-- Integración con Leaflet para visualización geográfica
-
----
 
 ## 📂 Convenciones
 
 - El esquema de base de datos usado es `sig`
 - Las migraciones personalizadas se crearán con el prefijo `create_`
 - Se utilizarán controladores tipo recurso (`--resource`) para los modelos CRUD
+
+## ✔️ Tabla de usuarios
+Usamos la tabla `cuis.usuarios` con los campos:
+
+```
+CREATE TABLE IF NOT EXISTS cuis.usuarios (
+    id integer PRIMARY KEY,
+    nombre text NOT NULL,
+    email text UNIQUE NOT NULL,
+    password_hash text NOT NULL,
+    rol text NOT NULL CHECK (rol IN ('admin', 'editor', 'visualizador')),
+    fecha_creacion timestamp DEFAULT now(),
+    estado boolean DEFAULT true
+);
+```
