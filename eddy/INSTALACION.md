@@ -42,8 +42,6 @@ git clone https://github.com/XtnPaez/laraeddy.git
 
 ### 2. Crear proyecto Laravel
 ```
-Copiar
-Editar
 cd laraeddy
 composer create-project laravel/laravel eddy
 ```
